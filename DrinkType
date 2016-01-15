@@ -1,0 +1,10 @@
+/**
+ * This is an enum class which introduces the drinks available
+ * declared as enum types.
+ * @author Saif Shikdar
+ */
+ 
+public enum DrinkType {
+  
+	WATER, SODA, JUICE, WINE, BEER
+}
