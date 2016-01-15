@@ -1,0 +1,10 @@
+/**
+ * This is an enum class which introduces the available sizes
+ * drinks declared as enum types.
+ * @author Saif Shikdar
+ */
+ 
+public enum DrinkSize {
+
+	SMALL, MEDIUM, LARGE, EXTRALARGE
+}
