@@ -1,0 +1,10 @@
+/**
+ * This is an enum class which introduces the types of staff available
+ * declared as enum types.
+ * @author Saif Shikdar
+ */
+ 
+public enum StaffType {
+	
+	MANAGER, WAITER, KITCHENSTAFF
+}
