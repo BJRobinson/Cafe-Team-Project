@@ -1,0 +1,12 @@
+/**
+ * This is an enum class which introduces the ingredient types
+ * declared as enum types.
+ * @author Saif Shikdar
+ */
+
+public enum IngredientType {
+
+  COW, PORK, CHICKEN, FISH, VEGETABLE, FUNGHI,
+  CONDIMENT, CHEESE, EGG, MILK, POWDER
+
+}
