@@ -1,0 +1,43 @@
+import java.util.HashMap;
+
+/**
+ * @author Saif Shikdar
+ *
+ */
+public class Stock {
+	
+	public HashMap<String, Integer> itemsmap = new HashMap<String, Integer>();
+	
+	private static Stock instance = null;
+
+	private Stock() {
+		
+	}
+	
+	public static Stock getInstance() {
+		if (instance == null) {
+			instance = new Stock();
+		}
+		return instance;
+	}
+	
+	public int getAmount(String name) {
+		return itemsmap.get(name);
+	}
+	
+	public void addIngredient(String name, Integer amount) {
+		itemsmap.put(name, amount);
+	}
+	
+	public void removeIngredient(String name) {
+		itemsmap.remove(name);
+	}
+	
+	public void addDrink(String name, Integer amount) {
+		itemsmap.put(name, amount);
+	}
+	
+	public void removeDrink(String name) {
+		itemsmap.remove(name);
+	}
+}
