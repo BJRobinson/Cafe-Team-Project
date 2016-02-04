@@ -34,6 +34,8 @@ public class waiter {
   public String getName() {
     return this.name;
   }
+  
+  //public void confirm_order(){}
 
 
 }
