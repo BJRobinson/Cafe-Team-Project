@@ -23,7 +23,7 @@
       String port = "27007";
       String host = "localhost";
       String database = "teamproject";
-  
+
       db = new ProjectDatabase(user, port, host, database);
       setUp();
       

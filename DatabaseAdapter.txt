@@ -1,0 +1,64 @@
+import java.sql.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class DatabaseAdapter {
+
+  public ProjectDatabase dbc;
+
+  public DatabaseAdapter(ProjectDatabase dbc) {
+    this.dbc = dbc;
+  }
+  
+  public void createDrinkStock(String name, int amount, String type, String size,
+      float price, int calories, boolean isAlcoholic) {
+      
+    Map<String, Object> values = new HashMap<String, Object>();
+    values.put("name", name);
+    values.put("amount", amount);
+    values.put("type", type);
+    values.put("size", size);
+    values.put("price", price);
+    values.put("calories", calories);
+    values.put("isalcoholic", isAlcoholic);
+    
+    dbc.insertInto("DrinkStock", values);
+   
+  }
+  
+  //public void getDrinkStock()
+  
+  //public void removeDrinkStock();
+  
+  //public void createOrders(int orderNumber, Date date, String dishes, String drinks, int tableNumber, int state) 
+    
+    
+  
+    
+    
+  public void createWaiters(int waiterID, String waiterName, int numberOfOrders) {
+    
+    Map<String, Object> values2 = new HashMap<String, Object>();
+    values2.put("waiterID", waiterID);
+    values2.put("waiterName", waiterName);
+    values2.put("numberOfOrders", numberOfOrders);
+    
+    dbc.insertInto("Waiters", values2);
+    
+  }
+  
+  public void createDeals(String name, float price, String dishes, String drinks) {
+    
+    Map<String, Object> values3 = new HashMap<String, Object>();
+    values3.put("name", name);
+    values3.put("price", price);
+    values3.put("dishes", dishes);
+    values3.put("drinks", drinks);
+    
+    dbc.insertInto("Deals", values3);
+
+  }
+ 
+
+}
