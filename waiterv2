@@ -41,6 +41,12 @@ public class waiter {
   
   public void confirm_order()
   {}
+  
+   public void en_route()
+  {}
+  
+    public void arrived()
+  {}
 }
 
 
