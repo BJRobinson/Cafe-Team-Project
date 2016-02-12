@@ -1,8 +1,4 @@
 package team_project;
-//hardcode for now
-//2-> confirm order 4-->order en route 5-->order arrived
-
-//include order class
 public class waiter {
   String name;
   int id;
@@ -39,15 +35,20 @@ public class waiter {
     return this.name;
   }
   
-  public void confirm_order()
-  {}
+  //update order shaould take an int as a parameter to update DB
   
-   public void en_route()
-  {}
+  public void confirmOrder(Order order)
+  {order.updateOrder(2);}
   
-    public void arrived()
-  {}
+
+  public void orderEnRoute(Order order)
+  {order.updateOrder(4);}
+  
+  public void orderArrived(Order order)
+  {order.updateOrder(5);}
 }
 
+
+  
 
 
