@@ -1,0 +1,23 @@
+package team_project;
+public class DBListener implements DatabaseChangeListener {
+	
+    private DbChangeNotification toNotify;
+
+    public DBListener(DbChangeNotification toNotify) {
+        this.toNotify = toNotify;
+    }
+
+    @Override
+    public void onDatabaseChangeNotification(DatabaseChangeEvent e) {
+        synchronized( toNotify ) {
+            try {
+                toNotify.notifyDBChangeEvent(e); //do sth
+            } catch (Exception ex) {
+                Util.logMessage(CLASSNAME, "onDatabaseChangeNotification", 
+              "Errors on the notifying object.", true);
+                Util.printStackTrace(ex);
+                Util.systemExit();                                       
+          }
+    }       
+    }
+}
